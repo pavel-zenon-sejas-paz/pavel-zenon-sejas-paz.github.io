@@ -17,4 +17,4 @@ Arquivos antigos que não existem mais (as pastas `pt`, `es`, `cv`, se tiverem s
 
 ## Foto
 
-Salve como `photo.jpg` (retrato, por exemplo 500×600 px) e peça ao Claude para gerar o site de novo.
+Salve a foto com o nome exato `photo.jpg` (formato retrato, por exemplo 500×600 px, até ~300 KB) e suba no repositório com **Add file → Upload files**. Ela aparece sozinha na página inicial dos três idiomas. Para trocar, suba outra `photo.jpg` por cima.
