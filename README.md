@@ -9,9 +9,9 @@ Site estático em uma pasta só, sem subpastas:
 
 ## Publicar ou atualizar no GitHub Pages
 
-1. Repositório público com o nome `pavelzsp.github.io`.
+1. Repositório público com o nome `pavel-zenon-sejas-paz.github.io`.
 2. **Add file → Upload files**: selecione TODOS os arquivos desta pasta (18 arquivos + este README) e envie.
-3. **Commit changes**. Em 1 a 2 minutos o site atualiza em https://pavelzsp.github.io
+3. **Commit changes**. Em 1 a 2 minutos o site atualiza em https://pavel-zenon-sejas-paz.github.io
 
 Arquivos antigos que não existem mais (as pastas `pt`, `es`, `cv`, se tiverem subido) podem ser apagados.
 
