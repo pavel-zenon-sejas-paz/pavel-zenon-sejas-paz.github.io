@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Publicações · Pavel Z. S. Paz</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Pavel Z. S. Paz, matemático aplicado no LAMAP/UFJF: escoamento em meios porosos, espuma, leis de conservação, dedos viscosos e armazenamento de hidrogênio.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;display=swap">
+<style>
+/* Layout: classic academic page; profile column beside a single reading column; serif headings over a sans text face */
+:root{
+  --bg:#FFFFFF; --fg:#1F2328; --muted:#555E6B; --line:#E3E6EA; --accent:#1F3A68; --accent-hover:#0F2142; --soft:#EEF2F8;
+  --serif:'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --sans:'Source Sans 3', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#11151B;--fg:#E4E8EE;--muted:#A3ACB8;--line:#2A313B;--accent:#9DB8E8;--accent-hover:#C4D5F2;--soft:#1A2230;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#11151B;--fg:#E4E8EE;--muted:#A3ACB8;--line:#2A313B;--accent:#9DB8E8;--accent-hover:#C4D5F2;--soft:#1A2230;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:17px;line-height:1.6}
+a{color:var(--accent)} a:hover{color:var(--accent-hover)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}
+.wrap{max-width:1100px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+header.site{border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 32px;padding-block:16px}
+.brand{font-family:var(--serif);font-weight:700;font-size:20px;color:var(--fg);text-decoration:none}
+.brand:hover{color:var(--fg)}
+nav.main{display:flex;flex-wrap:wrap;align-items:center;gap:6px 22px;font-size:15px;font-weight:500}
+nav.main a{text-decoration:none;color:var(--muted);padding-block:4px}
+nav.main a:hover{color:var(--accent)}
+nav.main a[aria-current="page"]{color:var(--fg);border-bottom:2px solid var(--accent)}
+.langs{color:var(--muted);font-size:14px}
+.langs a{text-decoration:none;color:var(--accent)}
+.langs b{color:var(--fg);font-weight:600}
+main .wrap{padding-block:44px 64px}
+.home{display:flex;flex-wrap:wrap;gap:48px}
+.profile{flex:1 1 250px;max-width:310px;display:flex;flex-direction:column;gap:18px}
+.photo{width:190px;max-width:100%;aspect-ratio:5/6;background:var(--soft);border:1px solid var(--line);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:14px}
+.photo img{width:100%;height:100%;object-fit:cover;border-radius:6px}
+.profile h1{margin:0;font-family:var(--serif);font-size:30px;line-height:1.2;text-wrap:balance}
+.profile p{margin:6px 0 0;color:var(--muted);font-size:16px}
+.links{display:flex;flex-direction:column;gap:4px;font-size:15px}
+.email{font-size:15px;user-select:all}
+.claw{font-family:var(--serif);font-style:italic;color:var(--muted);font-size:15px}
+.content{flex:999 1 560px;min-width:0;display:flex;flex-direction:column;gap:40px}
+.single{max-width:780px;display:flex;flex-direction:column;gap:40px}
+h2{margin:0 0 12px;font-family:var(--serif);font-size:25px;line-height:1.25;color:var(--accent);text-wrap:balance}
+h3{margin:0 0 4px;font-family:var(--serif);font-size:19px}
+.page-title{margin:0;font-family:var(--serif);font-size:34px;line-height:1.2;color:var(--fg)}
+.lede{margin:8px 0 0;color:var(--muted);max-width:65ch}
+section p{margin:0 0 12px;max-width:68ch}
+section p:last-child{margin-bottom:0}
+.dated{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.dated li{display:flex;flex-wrap:wrap;gap:0 18px}
+.dated .d{flex:0 0 92px;color:var(--muted);font-variant-numeric:tabular-nums;font-size:15px;padding-top:1px}
+.dated .t{flex:1 1 380px;min-width:0}
+.pubs{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:14px}
+.pubs li{padding-left:4px}
+.pubs .ti{font-weight:600}
+.pubs .src{color:var(--muted)}
+.topics{display:flex;flex-direction:column;gap:22px}
+.topics p{margin:0;color:var(--fg)}
+.plain{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px}
+.more{margin-top:12px;font-weight:600;font-size:15px}
+footer.site{border-top:1px solid var(--line)}
+footer.site .wrap{padding-block:20px;font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+@media (max-width:520px){.page-title{font-size:28px}.dated .d{flex-basis:100%}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="index-pt.html">Pavel Z. S. Paz</a>
+<nav class="main" aria-label="Menu"><a href="index-pt.html">Início</a><a href="research-pt.html">Pesquisa</a><a href="publications-pt.html" aria-current="page">Publicações</a><a href="talks-pt.html">Palestras</a><a href="teaching-pt.html">Ensino</a><a href="cv_pavel_pt.pdf">CV</a><span class="langs"><a href="publications.html" hreflang="en">EN</a> · <b>PT</b> · <a href="publications-es.html" hreflang="es">ES</a></span></nav>
+</div></header>
+<main><div class="wrap"><div class="single"><div><h1 class="page-title">Publicações</h1></div>
+<section><h2>Artigos em periódicos</h2><ol class="pubs" reversed><li>M. T. Mendonça, <strong>P. Z. S. Paz</strong>, J. Cedro, G. Chapiro. <span class="ti">A conservative-law model for the front velocities of competing viscous fingers in porous media</span>. <span class="src"><em>Physics of Fluids</em>, 38, 116715 (2026).</span> <a href="https://doi.org/10.1063/5.0348428">doi:10.1063/5.0348428</a></li><li><strong>P. Z. S. Paz</strong>, F. A. N. Obiang, F. F. de Paula, G. Chapiro. <span class="ti">On the stability of foam displacement simulations in porous media</span>. <span class="src"><em>Transport in Porous Media</em>, 153, 1–22 (2026).</span> <a href="https://doi.org/10.1007/s11242-025-02277-y">doi:10.1007/s11242-025-02277-y</a></li><li>G. C. Fritis, <strong>P. Z. S. Paz</strong>, G. Chapiro. <span class="ti">Modeling the optimal foam injection slug in porous media accounting adsorption effects</span>. <span class="src"><em>International Journal of Non-Linear Mechanics</em>, 178, 105199 (2025).</span> <a href="https://doi.org/10.1016/j.ijnonlinmec.2025.105199">doi:10.1016/j.ijnonlinmec.2025.105199</a></li><li>G. C. Fritis, <strong>P. Z. S. Paz</strong>, L. F. Lozano, G. Chapiro. <span class="ti">On the Riemann problem for the foam displacement in porous media with linear adsorption</span>. <span class="src"><em>SIAM Journal on Applied Mathematics</em>, 84, 581–601 (2024).</span> <a href="https://doi.org/10.1137/23M1566649">doi:10.1137/23M1566649</a></li><li>A. J. Castrillón Vásquez, <strong>P. Z. S. Paz</strong>, G. Chapiro. <span class="ti">On the viscous crossflow during the foam displacement in two-layered porous media</span>. <span class="src"><em>Transport in Porous Media</em>, 151, 2835–2857 (2024).</span> <a href="https://doi.org/10.1007/s11242-024-02135-3">doi:10.1007/s11242-024-02135-3</a></li><li>T. Danelon, <strong>P. Z. S. Paz</strong>, G. Chapiro. <span class="ti">The mathematical model and analysis of the nanoparticle-stabilized foam displacement</span>. <span class="src"><em>Applied Mathematical Modelling</em> (2023).</span> <a href="https://doi.org/10.1016/j.apm.2023.10.022">doi:10.1016/j.apm.2023.10.022</a></li><li><strong>P. Z. S. Paz</strong>, F. R. Cunha, Y. D. Sobral. <span class="ti">Stability of plane-parallel flow of magnetic fluids under external magnetic fields</span>. <span class="src"><em>Applied Mathematics and Mechanics</em> (2022).</span> <a href="https://doi.org/10.1007/s10483-022-2813-9">doi:10.1007/s10483-022-2813-9</a></li><li><strong>P. Z. S. Paz</strong>, T. H. Hollmann, E. Kermen, G. Chapiro, E. Slob, P. L. J. Zitha. <span class="ti">EM heating-stimulated water flooding for medium-heavy oil recovery</span>. <span class="src"><em>Transport in Porous Media</em> (2017).</span> <a href="https://doi.org/10.1007/s11242-017-0873-5">doi:10.1007/s11242-017-0873-5</a></li></ol></section>
+<section><h2>Trabalhos em anais de eventos</h2><ol class="pubs" reversed><li>G. C. Fritis, <strong>P. Z. S. Paz</strong>, L. F. Lozano, G. Chapiro. <span class="ti">Solução do problema de Riemann descrevendo o deslocamento de espuma com adsorção aplicado à indústria de petróleo</span>. <span class="src"><em>Proceeding Series of the Brazilian Society of Computational and Applied Mathematics (CNMAC)</em>, 12(1), 0337 (2026).</span> <a href="https://doi.org/10.5540/03.2026.012.01.0337">doi:10.5540/03.2026.012.01.0337</a></li><li>G. C. Fritis, <strong>P. Z. S. Paz</strong>, G. Chapiro. <span class="ti">Solution construction for a drainage process for a system modeling the foam flow with linear surfactant adsorption</span>. <span class="src"><em>XLIII Ibero-Latin American Congress on Computational Methods in Engineering (CILAMCE), Foz do Iguaçu</em> (2022).</span></li><li><strong>P. Z. S. Paz</strong>, F. R. Cunha, Y. D. Sobral. <span class="ti">Stability of plane-parallel flows of magnetic fluids</span>. <span class="src"><em>International Conference on Magnetic Fluids (ICMF), Paris</em> (2019).</span></li></ol></section></div></div></main>
+<footer class="site"><div class="wrap"><span>© 2026 Pavel Zenon Sejas Paz · LAMAP/UFJF</span><span>Atualizado em novembro de 2026</span></div></footer>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Investigación · Pavel Z. S. Paz</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Pavel Z. S. Paz, matemático aplicado en el LAMAP/UFJF: flujo en medios porosos, espuma, leyes de conservación, dedos viscosos y almacenamiento de hidrógeno.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;display=swap">
+<style>
+/* Layout: classic academic page; profile column beside a single reading column; serif headings over a sans text face */
+:root{
+  --bg:#FFFFFF; --fg:#1F2328; --muted:#555E6B; --line:#E3E6EA; --accent:#1F3A68; --accent-hover:#0F2142; --soft:#EEF2F8;
+  --serif:'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --sans:'Source Sans 3', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#11151B;--fg:#E4E8EE;--muted:#A3ACB8;--line:#2A313B;--accent:#9DB8E8;--accent-hover:#C4D5F2;--soft:#1A2230;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#11151B;--fg:#E4E8EE;--muted:#A3ACB8;--line:#2A313B;--accent:#9DB8E8;--accent-hover:#C4D5F2;--soft:#1A2230;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:17px;line-height:1.6}
+a{color:var(--accent)} a:hover{color:var(--accent-hover)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}
+.wrap{max-width:1100px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+header.site{border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 32px;padding-block:16px}
+.brand{font-family:var(--serif);font-weight:700;font-size:20px;color:var(--fg);text-decoration:none}
+.brand:hover{color:var(--fg)}
+nav.main{display:flex;flex-wrap:wrap;align-items:center;gap:6px 22px;font-size:15px;font-weight:500}
+nav.main a{text-decoration:none;color:var(--muted);padding-block:4px}
+nav.main a:hover{color:var(--accent)}
+nav.main a[aria-current="page"]{color:var(--fg);border-bottom:2px solid var(--accent)}
+.langs{color:var(--muted);font-size:14px}
+.langs a{text-decoration:none;color:var(--accent)}
+.langs b{color:var(--fg);font-weight:600}
+main .wrap{padding-block:44px 64px}
+.home{display:flex;flex-wrap:wrap;gap:48px}
+.profile{flex:1 1 250px;max-width:310px;display:flex;flex-direction:column;gap:18px}
+.photo{width:190px;max-width:100%;aspect-ratio:5/6;background:var(--soft);border:1px solid var(--line);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:14px}
+.photo img{width:100%;height:100%;object-fit:cover;border-radius:6px}
+.profile h1{margin:0;font-family:var(--serif);font-size:30px;line-height:1.2;text-wrap:balance}
+.profile p{margin:6px 0 0;color:var(--muted);font-size:16px}
+.links{display:flex;flex-direction:column;gap:4px;font-size:15px}
+.email{font-size:15px;user-select:all}
+.claw{font-family:var(--serif);font-style:italic;color:var(--muted);font-size:15px}
+.content{flex:999 1 560px;min-width:0;display:flex;flex-direction:column;gap:40px}
+.single{max-width:780px;display:flex;flex-direction:column;gap:40px}
+h2{margin:0 0 12px;font-family:var(--serif);font-size:25px;line-height:1.25;color:var(--accent);text-wrap:balance}
+h3{margin:0 0 4px;font-family:var(--serif);font-size:19px}
+.page-title{margin:0;font-family:var(--serif);font-size:34px;line-height:1.2;color:var(--fg)}
+.lede{margin:8px 0 0;color:var(--muted);max-width:65ch}
+section p{margin:0 0 12px;max-width:68ch}
+section p:last-child{margin-bottom:0}
+.dated{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.dated li{display:flex;flex-wrap:wrap;gap:0 18px}
+.dated .d{flex:0 0 92px;color:var(--muted);font-variant-numeric:tabular-nums;font-size:15px;padding-top:1px}
+.dated .t{flex:1 1 380px;min-width:0}
+.pubs{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:14px}
+.pubs li{padding-left:4px}
+.pubs .ti{font-weight:600}
+.pubs .src{color:var(--muted)}
+.topics{display:flex;flex-direction:column;gap:22px}
+.topics p{margin:0;color:var(--fg)}
+.plain{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px}
+.more{margin-top:12px;font-weight:600;font-size:15px}
+footer.site{border-top:1px solid var(--line)}
+footer.site .wrap{padding-block:20px;font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+@media (max-width:520px){.page-title{font-size:28px}.dated .d{flex-basis:100%}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="index-es.html">Pavel Z. S. Paz</a>
+<nav class="main" aria-label="Menu"><a href="index-es.html">Inicio</a><a href="research-es.html" aria-current="page">Investigación</a><a href="publications-es.html">Publicaciones</a><a href="talks-es.html">Charlas</a><a href="teaching-es.html">Docencia</a><a href="cv_pavel_es.pdf">CV</a><span class="langs"><a href="research.html" hreflang="en">EN</a> · <a href="research-pt.html" hreflang="pt-BR">PT</a> · <b>ES</b></span></nav>
+</div></header>
+<main><div class="wrap"><div class="single"><div><h1 class="page-title">Investigación</h1><p class="lede">Mi investigación trata de la matemática del flujo en medios porosos: construir modelos, resolverlos de forma exacta cuando es posible y entender cuándo los frentes de desplazamiento se vuelven inestables. También trabajo en estabilidad hidrodinámica de fluidos magnéticos.</p></div>
+<section><h2>Líneas de investigación</h2><div class="topics"><div><h3>Espuma en medios porosos</h3><p>Soluciones analíticas para el desplazamiento de espuma, con adsorción de surfactante, espuma estabilizada por nanopartículas y medios estratificados; diseño óptimo de bancos de espuma; estabilidad numérica de simuladores de espuma.</p></div><div><h3>Leyes de conservación hiperbólicas</h3><p>Problemas de Riemann para sistemas no estrictamente hiperbólicos, criterios de admisibilidad, ondas viajeras y el método de curvas de onda aplicados a flujos multifásicos.</p></div><div><h3>Inestabilidades de desplazamiento</h3><p>Inestabilidad de Saffman–Taylor y competencia de dedos viscosos, con modelos reducidos de leyes de conservación para la velocidad de los frentes.</p></div><div><h3>Almacenamiento subterráneo de hidrógeno</h3><p>Almacenamiento en acuíferos salinos y yacimientos agotados: dedos viscosos, segregación gravitacional, gas colchón y control de movilidad con espuma en ciclos de inyección y extracción.</p></div><div><h3>Estabilidad hidrodinámica de fluidos magnéticos</h3><p>Estabilidad de flujos de ferrofluidos bajo campos magnéticos externos: estabilidad lineal de flujos plano-paralelos (análisis de Orr–Sommerfeld con magnetización de equilibrio) e inestabilidad de Plateau–Rayleigh en filamentos de ferrofluido mediante aproximaciones de onda larga; métodos de perturbación. Línea iniciada en el doctorado en la UnB y la estancia en la UBC.</p></div></div></section>
+<section><h2>Proyectos financiados</h2><ul class="dated"><li><span class="d">2025–2028</span><span class="t">CNPq Universal 2025 (409718/2024-6): <em>Análise de escoamentos complexos em meios porosos: teoria e aplicações estratégicas</em>. Coordinador: Grigori Chapiro. Miembro del equipo.</span></li><li><span class="d">2024–</span><span class="t">FAPEMIG Universal (APQ-00206-24): <em>Modelagem matemática e computacional de fenômenos de transporte e aplicações</em>. Coordinador: Grigori Chapiro. Miembro del equipo.</span></li><li><span class="d">2023–</span><span class="t">I+D con Shell Brasil: <em>Avançando na modelagem matemática e computacional para apoiar a implementação da tecnologia Foam-assisted WAG em reservatórios do Pré-sal</em>. Coordinador: Grigori Chapiro. Investigador.</span></li><li><span class="d">2021</span><span class="t">I+D con Shell Brasil, PT-UPS009-W02: <em>Modelagem matemática e computacional de injeção de espuma usada em recuperação avançada de petróleo</em>. Coordinador: Grigori Chapiro. Posdoctorando.</span></li></ul></section></div></div></main>
+<footer class="site"><div class="wrap"><span>© 2026 Pavel Zenon Sejas Paz · LAMAP/UFJF</span><span>Actualizado en noviembre de 2026</span></div></footer>
+</body>
+</html>

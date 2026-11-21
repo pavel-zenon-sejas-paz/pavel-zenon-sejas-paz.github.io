@@ -1,17 +1,20 @@
 # Site acadêmico — Pavel Z. S. Paz
 
-Site estático: inglês na raiz, português em `/pt/` e espanhol em `/es/`.
+Site estático em uma pasta só, sem subpastas:
 
-## Publicar no GitHub Pages
+- inglês: `index.html`, `research.html`, `publications.html`, `talks.html`, `teaching.html`
+- português: os mesmos nomes terminados em `-pt.html`
+- espanhol: os mesmos nomes terminados em `-es.html`
+- CVs: `cv_pavel_pt.pdf` e `cv_pavel_es.pdf`
 
-1. Entre no GitHub (crie uma conta, se ainda não tiver).
-2. Crie um repositório **público** com o nome exato `SEU-USUARIO.github.io`, trocando SEU-USUARIO pelo seu nome de usuário.
-3. No repositório, clique em **Add file → Upload files** e arraste **todo o conteúdo desta pasta** (os arquivos `.html`, as pastas `pt`, `es` e `cv` e o arquivo `.nojekyll`). Depois clique em **Commit changes**.
-4. Vá em **Settings → Pages** e confira se a origem (Source) é **Deploy from a branch**, com a branch `main` e a pasta `/ (root)`.
-5. Em um ou dois minutos o site fica no ar em `https://SEU-USUARIO.github.io`.
+## Publicar ou atualizar no GitHub Pages
 
-## Atualizar
+1. Repositório público com o nome `pavelzsp.github.io`.
+2. **Add file → Upload files**: selecione TODOS os arquivos desta pasta (17 arquivos + este README) e envie.
+3. **Commit changes**. Em 1 a 2 minutos o site atualiza em https://pavelzsp.github.io
 
-- **Foto:** salve como `assets/photo.jpg` (de preferência em formato retrato, por exemplo 500×600 px) e peça ao Claude para gerar o site de novo. A foto aparece nas três línguas.
-- **CV:** substitua os PDFs em `cv/` mantendo os mesmos nomes de arquivo.
-- **Textos:** edite os `.html` direto no GitHub (ícone de lápis) ou peça ao Claude para regenerar o site.
+Arquivos antigos que não existem mais (as pastas `pt`, `es`, `cv`, se tiverem subido) podem ser apagados.
+
+## Foto
+
+Salve como `photo.jpg` (retrato, por exemplo 500×600 px) e peça ao Claude para gerar o site de novo.

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pavel Z. S. Paz</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Pavel Z. S. Paz, matemático aplicado en el LAMAP/UFJF: flujo en medios porosos, espuma, leyes de conservación, dedos viscosos y almacenamiento de hidrógeno.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;display=swap">
+<style>
+/* Layout: classic academic page; profile column beside a single reading column; serif headings over a sans text face */
+:root{
+  --bg:#FFFFFF; --fg:#1F2328; --muted:#555E6B; --line:#E3E6EA; --accent:#1F3A68; --accent-hover:#0F2142; --soft:#EEF2F8;
+  --serif:'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --sans:'Source Sans 3', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#11151B;--fg:#E4E8EE;--muted:#A3ACB8;--line:#2A313B;--accent:#9DB8E8;--accent-hover:#C4D5F2;--soft:#1A2230;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#11151B;--fg:#E4E8EE;--muted:#A3ACB8;--line:#2A313B;--accent:#9DB8E8;--accent-hover:#C4D5F2;--soft:#1A2230;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:17px;line-height:1.6}
+a{color:var(--accent)} a:hover{color:var(--accent-hover)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}
+.wrap{max-width:1100px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+header.site{border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 32px;padding-block:16px}
+.brand{font-family:var(--serif);font-weight:700;font-size:20px;color:var(--fg);text-decoration:none}
+.brand:hover{color:var(--fg)}
+nav.main{display:flex;flex-wrap:wrap;align-items:center;gap:6px 22px;font-size:15px;font-weight:500}
+nav.main a{text-decoration:none;color:var(--muted);padding-block:4px}
+nav.main a:hover{color:var(--accent)}
+nav.main a[aria-current="page"]{color:var(--fg);border-bottom:2px solid var(--accent)}
+.langs{color:var(--muted);font-size:14px}
+.langs a{text-decoration:none;color:var(--accent)}
+.langs b{color:var(--fg);font-weight:600}
+main .wrap{padding-block:44px 64px}
+.home{display:flex;flex-wrap:wrap;gap:48px}
+.profile{flex:1 1 250px;max-width:310px;display:flex;flex-direction:column;gap:18px}
+.photo{width:190px;max-width:100%;aspect-ratio:5/6;background:var(--soft);border:1px solid var(--line);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:14px}
+.photo img{width:100%;height:100%;object-fit:cover;border-radius:6px}
+.profile h1{margin:0;font-family:var(--serif);font-size:30px;line-height:1.2;text-wrap:balance}
+.profile p{margin:6px 0 0;color:var(--muted);font-size:16px}
+.links{display:flex;flex-direction:column;gap:4px;font-size:15px}
+.email{font-size:15px;user-select:all}
+.claw{font-family:var(--serif);font-style:italic;color:var(--muted);font-size:15px}
+.content{flex:999 1 560px;min-width:0;display:flex;flex-direction:column;gap:40px}
+.single{max-width:780px;display:flex;flex-direction:column;gap:40px}
+h2{margin:0 0 12px;font-family:var(--serif);font-size:25px;line-height:1.25;color:var(--accent);text-wrap:balance}
+h3{margin:0 0 4px;font-family:var(--serif);font-size:19px}
+.page-title{margin:0;font-family:var(--serif);font-size:34px;line-height:1.2;color:var(--fg)}
+.lede{margin:8px 0 0;color:var(--muted);max-width:65ch}
+section p{margin:0 0 12px;max-width:68ch}
+section p:last-child{margin-bottom:0}
+.dated{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.dated li{display:flex;flex-wrap:wrap;gap:0 18px}
+.dated .d{flex:0 0 92px;color:var(--muted);font-variant-numeric:tabular-nums;font-size:15px;padding-top:1px}
+.dated .t{flex:1 1 380px;min-width:0}
+.pubs{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:14px}
+.pubs li{padding-left:4px}
+.pubs .ti{font-weight:600}
+.pubs .src{color:var(--muted)}
+.topics{display:flex;flex-direction:column;gap:22px}
+.topics p{margin:0;color:var(--fg)}
+.plain{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px}
+.more{margin-top:12px;font-weight:600;font-size:15px}
+footer.site{border-top:1px solid var(--line)}
+footer.site .wrap{padding-block:20px;font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+@media (max-width:520px){.page-title{font-size:28px}.dated .d{flex-basis:100%}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="index-es.html">Pavel Z. S. Paz</a>
+<nav class="main" aria-label="Menu"><a href="index-es.html" aria-current="page">Inicio</a><a href="research-es.html">Investigación</a><a href="publications-es.html">Publicaciones</a><a href="talks-es.html">Charlas</a><a href="teaching-es.html">Docencia</a><a href="cv_pavel_es.pdf">CV</a><span class="langs"><a href="index.html" hreflang="en">EN</a> · <a href="index-pt.html" hreflang="pt-BR">PT</a> · <b>ES</b></span></nav>
+</div></header>
+<main><div class="wrap"><div class="home">
+<aside class="profile">
+<div class="photo" role="img" aria-label="foto">[foto]</div>
+<div><h1>Pavel Zenon Sejas Paz</h1><p>Investigador en Matemática<br>Laboratorio de Matemática Aplicada (LAMAP)<br>Departamento de Matemática<br>Universidade Federal de Juiz de Fora (UFJF), Brasil</p></div>
+<span class="email">psejasp@gmail.com</span>
+<div class="links">
+<a href="https://lattes.cnpq.br/0463425954630366">Lattes</a>
+<a href="https://orcid.org/0000-0001-9147-3644">ORCID</a>
+<a href="https://www.linkedin.com/in/pavel-zenon-sejas-paz">LinkedIn</a>
+<a href="cv_pavel_pt.pdf">CV en portugués (PDF)</a>
+<a href="cv_pavel_es.pdf">CV en español (PDF)</a>
+</div>
+<span class="claw" aria-hidden="true">∂<sub>t</sub>u + ∂<sub>x</sub>f(u) = 0</span>
+</aside>
+<div class="content">
+<section><h2>Acerca de mí</h2><p>Soy matemático aplicado y trabajo en el modelado matemático y computacional de flujos multifásicos en medios porosos. Mi trabajo combina leyes de conservación hiperbólicas, problemas de Riemann, análisis de estabilidad y métodos numéricos, con aplicaciones en recuperación mejorada de petróleo y almacenamiento geológico de gases.</p><p>Soy doctor en Matemática por la Universidade de Brasília (2020), con una estancia doctoral en la University of British Columbia bajo la supervisión de Neil J. Balmforth. Desde 2021 trabajo en el LAMAP/UFJF, primero como posdoctorando y, desde 2022, como investigador en un proyecto de I+D con Shell Brasil. También integro proyectos financiados por el CNPq y la FAPEMIG.</p></section>
+<section><h2>Novedades</h2><ul class="dated"><li><span class="d">nov 2026</span><span class="t">Salió en <em>Physics of Fluids</em> nuestro artículo sobre competencia de dedos viscosos.</span></li><li><span class="d">oct 2026</span><span class="t">Comencé a revisar para <em>Physics of Fluids</em>.</span></li><li><span class="d">ago 2026</span><span class="t">Póster en el 9th Brazil InterPore Chapter Meeting, Río de Janeiro.</span></li><li><span class="d">feb 2026</span><span class="t">Charla invitada en el XVIII Summer Workshop in Mathematics, Universidade de Brasília.</span></li></ul></section>
+<section><h2>Experiencia</h2><ul class="dated"><li><span class="d">2022–</span><span class="t">Investigador en Matemática, LAMAP/UFJF — proyecto de I+D con Shell Brasil (Foam-assisted WAG)</span></li><li><span class="d">2021</span><span class="t">Posdoctorado, LAMAP/UFJF — proyecto de I+D PT-UPS009-W02 con Shell Brasil</span></li><li><span class="d">2020–2021</span><span class="t">Profesor sustituto, Departamento de Matemática, Universidade de Brasília</span></li></ul></section>
+<section><h2>Formación</h2><ul class="dated"><li><span class="d">2020</span><span class="t">Doctorado en Matemática, Universidade de Brasília (UnB). Director: Yuri D. Sobral; codirector: Francisco R. Cunha</span></li><li><span class="d">2018–2019</span><span class="t">Estancia doctoral, University of British Columbia, Vancouver. Supervisor: Neil J. Balmforth</span></li><li><span class="d">2015</span><span class="t">Maestría en Matemática, Universidade Federal de Juiz de Fora (UFJF). Director: Grigori Chapiro</span></li><li><span class="d">2008</span><span class="t">Licenciatura en Matemáticas, Universidad Mayor de San Simón, Bolivia</span></li></ul></section>
+<section><h2>Publicaciones seleccionadas</h2><ol class="pubs"><li>M. T. Mendonça, <strong>P. Z. S. Paz</strong>, J. Cedro, G. Chapiro. <span class="ti">A conservative-law model for the front velocities of competing viscous fingers in porous media</span>. <span class="src"><em>Physics of Fluids</em>, 38, 116715 (2026).</span> <a href="https://doi.org/10.1063/5.0348428">doi:10.1063/5.0348428</a></li><li><strong>P. Z. S. Paz</strong>, F. A. N. Obiang, F. F. de Paula, G. Chapiro. <span class="ti">On the stability of foam displacement simulations in porous media</span>. <span class="src"><em>Transport in Porous Media</em>, 153, 1–22 (2026).</span> <a href="https://doi.org/10.1007/s11242-025-02277-y">doi:10.1007/s11242-025-02277-y</a></li><li>G. C. Fritis, <strong>P. Z. S. Paz</strong>, G. Chapiro. <span class="ti">Modeling the optimal foam injection slug in porous media accounting adsorption effects</span>. <span class="src"><em>International Journal of Non-Linear Mechanics</em>, 178, 105199 (2025).</span> <a href="https://doi.org/10.1016/j.ijnonlinmec.2025.105199">doi:10.1016/j.ijnonlinmec.2025.105199</a></li><li>G. C. Fritis, <strong>P. Z. S. Paz</strong>, L. F. Lozano, G. Chapiro. <span class="ti">On the Riemann problem for the foam displacement in porous media with linear adsorption</span>. <span class="src"><em>SIAM Journal on Applied Mathematics</em>, 84, 581–601 (2024).</span> <a href="https://doi.org/10.1137/23M1566649">doi:10.1137/23M1566649</a></li></ol><p class="more"><a href="publications-es.html">Todas las publicaciones →</a></p></section>
+</div>
+</div></div></main>
+<footer class="site"><div class="wrap"><span>© 2026 Pavel Zenon Sejas Paz · LAMAP/UFJF</span><span>Actualizado en noviembre de 2026</span></div></footer>
+</body>
+</html>
