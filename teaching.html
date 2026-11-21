@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Teaching and supervision · Pavel Z. S. Paz</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Pavel Z. S. Paz, applied mathematician at LAMAP/UFJF: flow in porous media, foam, conservation laws, viscous fingering and underground hydrogen storage.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;display=swap">
+<style>
+/* Layout: classic academic page; profile column beside a single reading column; serif headings over a sans text face */
+:root{
+  --bg:#FFFFFF; --fg:#1F2328; --muted:#555E6B; --line:#E3E6EA; --accent:#1F3A68; --accent-hover:#0F2142; --soft:#EEF2F8;
+  --serif:'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --sans:'Source Sans 3', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#11151B;--fg:#E4E8EE;--muted:#A3ACB8;--line:#2A313B;--accent:#9DB8E8;--accent-hover:#C4D5F2;--soft:#1A2230;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#11151B;--fg:#E4E8EE;--muted:#A3ACB8;--line:#2A313B;--accent:#9DB8E8;--accent-hover:#C4D5F2;--soft:#1A2230;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:17px;line-height:1.6}
+a{color:var(--accent)} a:hover{color:var(--accent-hover)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}
+.wrap{max-width:1100px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+header.site{border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 32px;padding-block:16px}
+.brand{font-family:var(--serif);font-weight:700;font-size:20px;color:var(--fg);text-decoration:none}
+.brand:hover{color:var(--fg)}
+nav.main{display:flex;flex-wrap:wrap;align-items:center;gap:6px 22px;font-size:15px;font-weight:500}
+nav.main a{text-decoration:none;color:var(--muted);padding-block:4px}
+nav.main a:hover{color:var(--accent)}
+nav.main a[aria-current="page"]{color:var(--fg);border-bottom:2px solid var(--accent)}
+.langs{color:var(--muted);font-size:14px}
+.langs a{text-decoration:none;color:var(--accent)}
+.langs b{color:var(--fg);font-weight:600}
+main .wrap{padding-block:44px 64px}
+.home{display:flex;flex-wrap:wrap;gap:48px}
+.profile{flex:1 1 250px;max-width:310px;display:flex;flex-direction:column;gap:18px}
+.photo{width:190px;max-width:100%;aspect-ratio:5/6;background:var(--soft);border:1px solid var(--line);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:14px}
+.photo img{width:100%;height:100%;object-fit:cover;border-radius:6px}
+.profile h1{margin:0;font-family:var(--serif);font-size:30px;line-height:1.2;text-wrap:balance}
+.profile p{margin:6px 0 0;color:var(--muted);font-size:16px}
+.links{display:flex;flex-direction:column;gap:4px;font-size:15px}
+.email{font-size:15px;user-select:all}
+.claw{font-family:var(--serif);font-style:italic;color:var(--muted);font-size:15px}
+.content{flex:999 1 560px;min-width:0;display:flex;flex-direction:column;gap:40px}
+.single{max-width:780px;display:flex;flex-direction:column;gap:40px}
+h2{margin:0 0 12px;font-family:var(--serif);font-size:25px;line-height:1.25;color:var(--accent);text-wrap:balance}
+h3{margin:0 0 4px;font-family:var(--serif);font-size:19px}
+.page-title{margin:0;font-family:var(--serif);font-size:34px;line-height:1.2;color:var(--fg)}
+.lede{margin:8px 0 0;color:var(--muted);max-width:65ch}
+section p{margin:0 0 12px;max-width:68ch}
+section p:last-child{margin-bottom:0}
+.dated{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.dated li{display:flex;flex-wrap:wrap;gap:0 18px}
+.dated .d{flex:0 0 92px;color:var(--muted);font-variant-numeric:tabular-nums;font-size:15px;padding-top:1px}
+.dated .t{flex:1 1 380px;min-width:0}
+.pubs{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:14px}
+.pubs li{padding-left:4px}
+.pubs .ti{font-weight:600}
+.pubs .src{color:var(--muted)}
+.topics{display:flex;flex-direction:column;gap:22px}
+.topics p{margin:0;color:var(--fg)}
+.plain{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px}
+.more{margin-top:12px;font-weight:600;font-size:15px}
+footer.site{border-top:1px solid var(--line)}
+footer.site .wrap{padding-block:20px;font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+@media (max-width:520px){.page-title{font-size:28px}.dated .d{flex-basis:100%}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="index.html">Pavel Z. S. Paz</a>
+<nav class="main" aria-label="Menu"><a href="index.html">Home</a><a href="research.html">Research</a><a href="publications.html">Publications</a><a href="talks.html">Talks</a><a href="teaching.html" aria-current="page">Teaching</a><a href="cv/cv_pavel_pt.pdf">CV</a><span class="langs"><b>EN</b> · <a href="pt/teaching.html" hreflang="pt-BR">PT</a> · <a href="es/teaching.html" hreflang="es">ES</a></span></nav>
+</div></header>
+<main><div class="wrap"><div class="single"><div><h1 class="page-title">Teaching and supervision</h1></div>
+<section><h2>Supervision</h2><h3>Ongoing</h3><ul class="plain"><li>Matheus T. Mendonça — PhD in Computational Modelling, UFJF (since 2025), co-advisor. Competing viscous fingers in porous media.</li><li>Fred A. Ndong Obiang — undergraduate research (Electrical Engineering), UFJF, co-advisor. Numerical instabilities in foam displacement.</li></ul>
+<h3 style="margin-top:18px">Completed</h3><ul class="plain"><li>Matheus T. Mendonça — MSc in Mathematics, UFJF, 2025, co-advisor. <em>Análise de um modelo simplificado descrevendo a instabilidade de Saffman–Taylor em meios porosos</em>.</li><li>Giulia C. Fritis — MSc in Mathematics, UFJF, 2023, co-advisor. <em>Problema de Riemann para um sistema de leis de conservação não estritamente hiperbólico modelando o deslocamento de espuma</em>.</li></ul></section>
+<section><h2>Teaching</h2><ul class="dated"><li><span class="d">2025</span><span class="t">Short course on hydrodynamic stability, Universidad Nacional de Ingeniería, Lima</span></li><li><span class="d">2020–2021</span><span class="t">Substitute Professor, University of Brasília: Mathematics I and II, Calculus I and II</span></li><li><span class="d">2017–2018</span><span class="t">Teaching assistant, University of Brasília: Calculus</span></li><li><span class="d">2013–2014</span><span class="t">Teaching assistant, UFJF: Analytic Geometry and Linear Systems</span></li><li><span class="d">2008–2012</span><span class="t">Lecturer at Bolivian universities (UMSS, UNIVALLE, ULAT, UNIFRANZ, UCATEC): calculus, algebra, differential equations, vector analysis, numerical methods</span></li></ul></section>
+<section><h2>Examination committees</h2><ul class="plain"><li>PhD theses (UFJF, Computational Modelling): G. B. de Miranda (2025), A. J. Castrillón Vásquez (2023), R. V. Quispe Zabala (2022).</li><li>Undergraduate thesis (UFJF, Mathematics): G. C. Fritis (2021).</li></ul></section>
+<section><h2>Peer review</h2><p>Reviewer for <em>Physics of Fluids</em> and <em>Geoenergy Science and Engineering</em>.</p></section></div></div></main>
+<footer class="site"><div class="wrap"><span>© 2026 Pavel Zenon Sejas Paz · LAMAP/UFJF</span><span>Last updated November 2026</span></div></footer>
+</body>
+</html>
